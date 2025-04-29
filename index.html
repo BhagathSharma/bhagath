@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Baggage Weight Checker</title>
+</head>
+<body>
+  <h2>Baggage Weight Checker</h2>
+  <label for="weight">Enter baggage weight (kg):</label>
+  <input type="number" id="weight" />
+  <button onclick="checkWeight()">Check</button>
+
+  <script>
+    function checkWeight() {
+      const weight = parseFloat(document.getElementById("weight").value);
+      if (isNaN(weight)) {
+        alert("Please enter a valid number.");
+        return;
+      }
+
+      if (weight > 15) {
+        alert("Weight exceeds 15 kg limit!");
+      } else {
+        alert("No problem, weight is within the limit.");
+      }
+    }
+  </script>
+</body>
+</html>
+
